@@ -1,0 +1,8 @@
+.icon {
+
+	&-notification:before {
+		content: url(../icons/icon-bell.svg);
+		display: block;
+		width: 20px;
+	}
+}

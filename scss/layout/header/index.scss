@@ -1,0 +1,40 @@
+.header {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	height: 71px;
+	padding: 14px 20px 15px;
+	background: $color-secondary;
+	&__logo {
+		margin: 0;
+		color: #fff;
+		font-weight: normal;
+		&--bold {
+			font-weight: bold;
+		}
+		// &:after {
+		// 	content: "TM";
+		// }
+	}
+	&__aside {
+		display: flex;
+	}
+	&__button {
+		align-self: center;
+		border: 0;
+		background: transparent;
+	}
+	&__profile {
+		display: flex;
+		padding: 0 15px;
+		border-left: 1px solid #5d61bf;
+	}
+	&__avatar {
+		align-self: center;
+		padding-right: 8px;
+	}
+	span {
+		align-self: center;
+		color: #fff;
+	}
+}

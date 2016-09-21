@@ -1,0 +1,68 @@
+body {
+  margin: 0; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.roundImage {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%; }
+
+.icon-notification:before {
+  content: url(../icons/icon-bell.svg);
+  display: block;
+  width: 20px; }
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 71px;
+  padding: 14px 20px 15px;
+  background: #7477bf; }
+  .header__logo {
+    margin: 0;
+    color: #fff;
+    font-weight: normal; }
+    .header__logo--bold {
+      font-weight: bold; }
+  .header__aside {
+    display: flex; }
+  .header__button {
+    align-self: center;
+    border: 0;
+    background: transparent; }
+  .header__profile {
+    display: flex;
+    padding: 0 15px;
+    border-left: 1px solid #5d61bf; }
+  .header__avatar {
+    align-self: center;
+    padding-right: 8px; }
+  .header span {
+    align-self: center;
+    color: #fff; }
+
+.main {
+  display: flex; }
+
+.navigation {
+  box-sizing: border-box;
+  width: 89px;
+  background: #4d4c72; }
+  .navigation__item {
+    width: 30px;
+    padding: 15px 29px;
+    margin: 14px 0; }
+    .navigation__item--active {
+      border-left: 3px solid #81c98f; }
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 24px; }
+
+/*# sourceMappingURL=main.css.map */

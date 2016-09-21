@@ -1,0 +1,13 @@
+.navigation {
+	box-sizing: border-box;
+	width: 89px;
+	background: $color-tertiary;
+	&__item {
+		width: 30px;
+		padding: 15px 29px;
+		margin: 14px 0;
+		&--active {
+			border-left: 3px solid $color-success;
+		}
+	}
+}
