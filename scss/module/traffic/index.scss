@@ -19,18 +19,21 @@
 	    }
 		&__item {
 			// display: inline-block;
-		    align-self: center;
+			margin: 0 2px;
+	    align-self: center;
 
 			// padding-left: 20px;
 		}
 		&__button {
-		    padding: 4px 20px;
+		    padding: 4px 13px;
     		font-size: 0.6em;
 			&--active,
 			&:hover,
 			&:focus {
 				background: #81c98f;
-			    border-radius: 25%;
+				-moz-border-radius: 50px / 50px;
+				-webkit-border-radius: 50px / 50px;
+				border-radius: 50px / 50px;
 			    color: #fff;
 			}
 		}
