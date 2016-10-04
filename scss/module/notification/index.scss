@@ -23,10 +23,11 @@
 	}
 	&__close {
 		position: absolute;
-	    top: 9px;
+	    top: 50%;
 	    right: 10px;
 	    color: #fff;
 	    font-size: 0.75em;
 		font-weight: bold;
+		transform: translateY(-50%);
 	}
 }
