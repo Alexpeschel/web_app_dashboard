@@ -1,13 +1,37 @@
 .navigation {
+	position: fixed;
+	top: 71px;
+	left: 0;
 	box-sizing: border-box;
-	width: 89px;
+	width: 59px;
 	background: $color-tertiary;
+	@media (max-width: 799px) {
+		transform: translate3d(-100%, 0, 0);
+		transition: 0.7s all;
+	}
+	@media (min-width: 800px) {
+		width: 89px;
+	}
 	&__item {
-		width: 30px;
-		padding: 15px 29px;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 15px 18px;
 		margin: 14px 0;
+		@media (min-width: 800px) {
+			padding: 15px 28px;
+		}
 		&--active {
 			border-left: 3px solid $color-success;
 		}
+	}
+	&__link {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+@media (max-width: 799px) {
+	.nav-open .navigation {
+		transform: translate3d(0, 0, 0);
 	}
 }

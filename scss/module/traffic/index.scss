@@ -1,0 +1,44 @@
+.traffic {
+	box-sizing: border-box;
+	width: 100%;
+	// max-height: 400px;
+	padding: 0 24px;
+	margin-bottom: 30px;
+	&__header {
+		@media (min-width: 800px) {
+			display: flex;
+				justify-content: space-between;
+		}
+	}
+	&__nav {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 5px;
+	    @media (min-width: 800) {
+	    	margin-bottom: 0;
+	    }
+		&__item {
+			// display: inline-block;
+		    align-self: center;
+
+			// padding-left: 20px;
+		}
+		&__button {
+		    padding: 4px 20px;
+    		font-size: 0.6em;
+			&--active,
+			&:hover,
+			&:focus {
+				background: #81c98f;
+			    border-radius: 25%;
+			    color: #fff;
+			}
+		}
+	}
+	canvas {
+			@media(min-width: 800px) {
+	    	max-width: 973px;
+	    	margin: 0 auto;
+			}
+	}
+}

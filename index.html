@@ -9,6 +9,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/css-toggle-switch/latest/toggle-switch.css" />
         <link rel="stylesheet" href="css/main.css">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
@@ -16,15 +18,22 @@
 
         <header class="header">
         	<h1 class="header__logo"><span class="header__logo--bold">Your</span>App™</h1>
+
         	<aside class="header__aside">
-				<button class="header__button icon-notification">
+
+				<button class="header__button header__button--active icon-notification">
                     <!-- <img width="100" src="icons/icon-bell.svg" alt=""> -->
                 </button>
+
 				<div class="header__profile">
                     <img src="img/avatar.png" alt="avatar" class="header__avatar roundImage">
                     <span>Josh Sullivan</span>
                 </div>
+
 			</aside>
+
+            <button id="toggleNav" class="header__navToggle">&#9776;</button>
+
         </header>
 
         <main class="main">
@@ -55,155 +64,277 @@
             </nav>
 
             <div class="content">
+
                 <header class="main__header">
                     <h2>Dashboard</h2>
                     <div class="search main__search">
-                        <input type="search" class="search__input">
-                        <button class="search__button">Lupe</button>
+                        <input type="search" class="search__input" placeholder="Search">
+                        <button class="search__button">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Feedbin-Icon-home-search.svg/500px-Feedbin-Icon-home-search.svg.png" alt="">
+                        </button>
                     </div>
                 </header>
-                <div class="notification">
-                    <p class="notification__text">
-                        <span class="notification__text--bold">Alert:</span> Lorem ipsum dolor sit amet, consetetur sadipscing.
-                    </p>
-                    <button class="notifitcation__close">x</button>
-                </div>
-                <section class="traffic">
-                    <h3 class="section__heading">Traffic</h3>
 
+                <div class="notifications">
+                    <div class="notification">
+                        <p class="notification__text">
+                            <span class="notification__status">Alert</span> Lorem ipsum dolor sit amet, consetetur sadipscing.
+                        </p>
+                        <button class="notification__close js_closeNote">x</button>
+                    </div>
+                </div>
+
+                <section class="traffic">
+                    <header class="traffic__header">
+                        <h3 class="section__heading">Traffic</h3>
+                        <ul class="traffic__nav">
+                            <li class="traffic__nav__item">
+                                <button class="traffic__nav__button">Hourly</button>
+                            </li>
+                            <li class="traffic__nav__item">
+                                <button class="traffic__nav__button">Daily</button>
+                            </li>
+                            <li class="traffic__nav__item">
+                                <button class="traffic__nav__button traffic__nav__button--active">Weekly</button>
+                            </li>
+                            <li class="traffic__nav__item">
+                                <button class="traffic__nav__button">Monthly</button>
+                            </li>
+                        </ul>
+                    </header>
+                    <canvas id="trafficChart"></canvas>
                 </section>
+
                 <section class="dailyTraffic">
                     <h3 class="section__heading">Daily Traffic</h3>
-                    
+                    <canvas id="dailyTrafficChart"></canvas>
                 </section>
+
                 <section class="mobileUsers">
                     <h3 class="section__heading">Mobile Users</h3>
-                    
+                    <canvas id="mobileUsersChart"></canvas>
                 </section>
+
                 <section class="social">
                     <h3 class="section__heading">Social Stats</h3>
-                    <article class="social__twitter">
-                        
-                    </article>
-                    <article class="social__facebook">
-                        
-                    </article>
-                    <article class="social__google">
-                        
-                    </article>
+                    <div class="social__container">
+                        <article class="social__twitter social__item">
+                            <div class="social__icon">
+                                <img src="icons/icon-twitter.svg" alt="twitter">
+                            </div>
+                            <div class="social__item__info">
+                                <h4 class="social__item__heading">Twitter</h4>
+                                <span class="social__item__count">10,345</span>
+                            </div>
+                        </article>
+                        <article class="social__facebook social__item">
+                            <div class="social__icon">
+                                <img src="icons/icon-facebook.svg" alt="facebook">
+                            </div>
+                            <div class="social__item__info">
+                                <h4 class="social__item__heading">Facebook</h4>
+                                <span class="social__item__count">8,739</span>
+                            </div>
+                            
+                        </article>
+                        <article class="social__google social__item">
+                            <div class="social__icon">
+                                <img src="icons/icon-google-plus.svg" alt="google+">
+                            </div>
+                            <div class="social__item__info">
+                                <h4 class="social__item__heading">Google+</h4>
+                                <span class="social__item__count">2,530</span>
+                            </div>
+                            
+                        </article>
+                    </div>
                 </section>
+
                 <section class="newMembers">
                     <h3 class="section__heading">New Members</h3>
                     <ul>
                         <li class="newMembers__item">
-                            <img class="newMembers__img roundImage" src="" alt="user image">
-                            <div class="newMembers__info">
-                                <h5 class="newMembers__name">Victoria Chambers</h5>
-                                <a class="newMembers__email" href="#">victoria.chambers@example.com</a>
-                            </div>
-                            <div class="newMembers__joined">
-                                <time datetime="2015-10-15T19:00">10/15/15</time>
-                            </div>
-                        </li>
-                        <li class="newMembers__item">
-                            <img class="newMembers__img roundImage" src="" alt="user image">
-                            <div class="newMembers__info">
-                                <h5 class="newMembers__name">Victoria Chambers</h5>
-                                <a class="newMembers__email" href="#">victoria.chambers@example.com</a>
-                            </div>
-                            <div class="newMembers__joined">
-                                <time datetime="2015-10-15T19:00">10/15/15</time>
+                            <img class="newMembers__img roundImage" src="img/avatar.png" alt="user image">
+                            <div class="newMember__content">   
+                                <div class="newMembers__info">
+                                    <h5 class="newMembers__name">Victoria Chambers</h5>
+                                    <a class="newMembers__email" href="#">victoria.chambers@example.com</a>
+                                </div>
+                                <div class="newMembers__joined">
+                                    <time datetime="2015-10-15T19:00">10/15/15</time>
+                                </div>
                             </div>
                         </li>
                         <li class="newMembers__item">
-                            <img class="newMembers__img roundImage" src="" alt="user image">
-                            <div class="newMembers__info">
-                                <h5 class="newMembers__name">Victoria Chambers</h5>
-                                <a class="newMembers__email" href="#">victoria.chambers@example.com</a>
-                            </div>
-                            <div class="newMembers__joined">
-                                <time datetime="2015-10-15T19:00">10/15/15</time>
+                            <img class="newMembers__img roundImage" src="img/avatar.png" alt="user image">
+                            <div class="newMember__content">  
+                                <div class="newMembers__info">
+                                    <h5 class="newMembers__name">Victoria Chambers</h5>
+                                    <a class="newMembers__email" href="#">victoria.chambers@example.com</a>
+                                </div>
+                                <div class="newMembers__joined">
+                                    <time datetime="2015-10-15T19:00">10/15/15</time>
+                                </div>
                             </div>
                         </li>
                         <li class="newMembers__item">
-                            <img class="newMembers__img roundImage" src="" alt="user image">
-                            <div class="newMembers__info">
-                                <h5 class="newMembers__name">Victoria Chambers</h5>
-                                <a class="newMembers__email" href="#">victoria.chambers@example.com</a>
+                            <img class="newMembers__img roundImage" src="img/avatar.png" alt="user image">
+                            <div class="newMember__content">  
+                                <div class="newMembers__info">
+                                    <h5 class="newMembers__name">Victoria Chambers</h5>
+                                    <a class="newMembers__email" href="#">victoria.chambers@example.com</a>
+                                </div>
+                                <div class="newMembers__joined">
+                                    <time datetime="2015-10-15T19:00">10/15/15</time>
+                                </div>
                             </div>
-                            <div class="newMembers__joined">
-                                <time datetime="2015-10-15T19:00">10/15/15</time>
+                        </li>
+                        <li class="newMembers__item">
+                            <img class="newMembers__img roundImage" src="img/avatar.png" alt="user image">
+                            <div class="newMember__content">  
+                                <div class="newMembers__info">
+                                    <h5 class="newMembers__name">Victoria Chambers</h5>
+                                    <a class="newMembers__email" href="#">victoria.chambers@example.com</a>
+                                </div>
+                                <div class="newMembers__joined">
+                                    <time datetime="2015-10-15T19:00">10/15/15</time>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </section>
+
                 <section class="activity">
                     <h3 class="section__heading">Recent Activity</h3>
                     <ul>
                         <li class="activity__item">
-                            <img class="activity__img roundImage" src="" alt="user image">
-                            <p class="activity__teaser">Victoria Chambers commented on YourApp's SEO Tips</p>
-                            <span class="activity__time">
-                                <time datetime="2015-10-15T19:00">4 hours ago</time>
-                            </span>
-                            <a href="#" class="activity__link icon-arrow"></a>
+                            <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
+                            <p class="activity__teaser">
+                                Victoria Chambers commented on YourApp's SEO Tips
+                                <span class="activity__time">
+                                    <time datetime="2015-10-15T19:00">4 hours ago</time>
+                                </span>
+                            </p>
+                            <a href="#" class="activity__link icon-arrow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
+<g>
+    <g id="chevron-right">
+        <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153   " fill="#7a7ec2"/>
+    </g>
+</g>
+
+</svg></a>
                         </li>
                         <li class="activity__item">
-                            <img class="activity__img roundImage" src="" alt="user image">
-                            <p class="activity__teaser">Victoria Chambers commented on YourApp's SEO Tips</p>
-                            <span class="activity__time">
-                                <time datetime="2015-10-15T19:00">4 hours ago</time>
-                            </span>
-                            <a href="#" class="activity__link icon-arrow"></a>
+                            <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
+                            <p class="activity__teaser">
+                                Victoria Chambers commented on YourApp's SEO Tips
+                                <span class="activity__time">
+                                    <time datetime="2015-10-15T19:00">4 hours ago</time>
+                                </span>
+                            </p>
+                            <a href="#" class="activity__link icon-arrow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
+<g>
+    <g id="chevron-right">
+        <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153   " fill="#7a7ec2"/>
+    </g>
+</g>
+
+</svg></a>
                         </li>
                         <li class="activity__item">
-                            <img class="activity__img roundImage" src="" alt="user image">
-                            <p class="activity__teaser">Victoria Chambers commented on YourApp's SEO Tips</p>
-                            <span class="activity__time">
-                                <time datetime="2015-10-15T19:00">4 hours ago</time>
-                            </span>
-                            <a href="#" class="activity__link icon-arrow"></a>
+                            <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
+                            <p class="activity__teaser">
+                                Victoria Chambers commented on YourApp's SEO Tips
+                                <span class="activity__time">
+                                    <time datetime="2015-10-15T19:00">4 hours ago</time>
+                                </span>
+                            </p>
+                            <a href="#" class="activity__link icon-arrow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
+<g>
+    <g id="chevron-right">
+        <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153   " fill="#7a7ec2"/>
+    </g>
+</g>
+
+</svg></a>
                         </li>
                         <li class="activity__item">
-                            <img class="activity__img roundImage" src="" alt="user image">
-                            <p class="activity__teaser">Victoria Chambers commented on YourApp's SEO Tips</p>
-                            <span class="activity__time">
-                                <time datetime="2015-10-15T19:00">4 hours ago</time>
-                            </span>
-                            <a href="#" class="activity__link icon-arrow"></a>
+                            <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
+                            <p class="activity__teaser">
+                                Victoria Chambers commented on YourApp's SEO Tips
+                                <span class="activity__time">
+                                    <time datetime="2015-10-15T19:00">4 hours ago</time>
+                                </span>
+                            </p>
+                            <a href="#" class="activity__link icon-arrow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
+<g>
+    <g id="chevron-right">
+        <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153   " fill="#7a7ec2"/>
+    </g>
+</g>
+
+</svg></a>
                         </li>
                     </ul>
                 </section>
+
                 <section class="messageUser">
                     <h3 class="section__heading">Message User</h3>
+
                     <form action="" class="messageUser__form">
-                        <input type="search" class="messageUser__input">
-                        <textarea class="messageUser__textarea" name="usermsg" id="" cols="30" rows="10"></textarea>
+                        <input type="search" class="messageUser__input" placeholder="Search for User">
+                        <textarea class="messageUser__textarea" name="usermsg" id="" cols="30" rows="10" placeholder="Message for User"></textarea>
                         <button class="messageUser__button button-primary">Send</button>
                     </form>
+
                 </section>
+
                 <section class="settings">
+                    <h3 class="section__heading">Settings</h3>
+
                     <form action="" class="settings__form">
+
                         <div class="settings__item">
                             <label class="settings__label" for="emailNotification">Send Email Notification</label>
-                            <input class="settings__switch" id="emailNotification" type="radio" value="0" name="emailNotificationSwitch">
-                            <input class="settings__switch" type="radio" value="1" name="emailNotificationSwitch">
+                            <label class="settings__switch switch-light switch-ios" onclick="" for="emailNotification">
+                                <input type="checkbox" id="emailNotification" checked>
+                                <span>
+                                  <span>Off</span>
+                                  <span>On</span>
+                                  <a></a>
+                                </span>
+                              </label>
                         </div> 
+
                         <div class="settings__item">
                             <label class="settings__label" for="setPublic">Set Profile to Public</label>
-                            <input class="settings__switch" id="setPublic" type="radio" value="0" name="setPublicSwitch">
-                            <input class="settings__switch" type="radio" value="1" name="setPublicSwitch">
+                            <label class="settings__switch switch-light switch-ios" onclick="" for="setPublic">
+                                <input type="checkbox" id="setPublic" checked>
+                                <span>
+                                  <span>Off</span>
+                                  <span>On</span>
+                                  <a></a>
+                                </span>
+                            </label>
                         </div>
-                        <select name="timezone" id="timezone">
+
+                        <select class="settings__timezone" name="timezone" id="timezone">
                             <option value="0" selected>Select Timezone</option>
                         </select>
-                        <button class="settings__button button-primary">Save</button>
-                        <button class="settings__button button-default">Cancel</button>
+
+                        <div class="settings__buttons">
+                            <button class="settings__button button-primary">Save</button>
+                            <button class="settings__button button-default">Cancel</button>
+                        </div>
+
                     </form>
+
                 </section>
             </div>
 
         </main>
         
+        <script src="js/vendor/chart.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

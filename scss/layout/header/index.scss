@@ -1,13 +1,23 @@
 .header {
 	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
 	display: flex;
 	justify-content: space-between;
-	height: 71px;
-	padding: 14px 20px 15px;
+	align-items: center;
+	width: 100%;
+	height: 51px;
+	padding: 0.875rem 0.9375rem;
 	background: $color-secondary;
+	z-index: 9999;
+	@media (min-width: 800px) {
+		height: 71px;
+	}
 	&__logo {
 		margin: 0;
 		color: #fff;
+    	font-size: 1em;
 		font-weight: normal;
 		&--bold {
 			font-weight: bold;
@@ -20,21 +30,55 @@
 		display: flex;
 	}
 	&__button {
+		position: relative;
+    	top: 3px;
 		align-self: center;
+		padding-right: 1.25rem;
 		border: 0;
 		background: transparent;
+		&--active {
+			&:after {
+				position: absolute;
+				top: 0;
+				right: 15px;
+				display: block;
+				content: '';
+				width: 7px;
+				height: 7px;
+				background: #85db81;
+				border-radius: 50%;
+			}
+		}
 	}
 	&__profile {
 		display: flex;
-		padding: 0 15px;
+    	padding: 0 0 0 0.9375rem;
 		border-left: 1px solid #5d61bf;
+		@media (min-width: 800px) {
+			padding: 0 15px;
+		}
+		span {
+			display: none;
+			align-self: center;
+			color: #fff;
+			font-size: 0.75em;
+			@media (min-width: 800px) {
+				display: inline-block;
+			}
+		}
 	}
 	&__avatar {
 		align-self: center;
-		padding-right: 8px;
+		@media (min-width: 800px) {
+			padding-right: 8px;
+		}
 	}
-	span {
-		align-self: center;
+	&__navToggle {
+		order: -1;
+		font-size: 1.3em;
 		color: #fff;
+		@media (min-width: 800px) {
+			display: none;
+		}
 	}
 }

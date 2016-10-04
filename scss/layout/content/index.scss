@@ -1,5 +1,24 @@
 .content {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0 24px;
+	// width: calc(100% - 59px);
+	width: 100%;
+	background: #fff;
+	margin-top: 51px;
+	// margin-left: 59px;
+	padding-bottom: 37px;
+	@media (max-width: 799px) {
+		transition: 0.7s all; 
+	}
+	@media (min-width: 800px) {
+			width: calc(100% - 89px);
+			margin-top: 71px;
+			margin-left: 89px;
+	}
+}
+
+@media (max-width: 799px) {
+	.nav-open .content {
+		transform: translate3d(59px, 0, 0);
+	}
 }

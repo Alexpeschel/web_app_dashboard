@@ -1,0 +1,23 @@
+.button {
+	&-primary {
+		box-sizing: border-box;
+		background: $color-primary;
+	    height: 2.5em;
+	    line-height: 2.5;
+	    padding: 0 1em;
+	    border-radius: 4px;
+    	font-size: 1em;
+	    color: #fff;
+	    text-transform: uppercase;
+	}
+	&-default {
+		background: $color-cancel;
+	    height: 2.5em;
+	    line-height: 2.5;
+	    padding: 0 1em;
+	    border-radius: 4px;
+    	font-size: 1em;
+	    color: #fff;
+	    text-transform: uppercase;
+	}
+}

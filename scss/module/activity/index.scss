@@ -1,0 +1,48 @@
+.activity {
+	box-sizing: border-box;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-top: 1px solid $color-section-border;
+	@media (min-width: 800px) {
+		width: 50%;
+		padding-right: 24px;
+		padding-left: 36px;
+	}
+	&__item {
+		display: flex;
+		padding-top: 20px;
+    	padding-bottom: 22px;
+		border-top: 1px solid #e9e9e9;
+		&:first-of-type {
+			padding-top: 0;
+			border-top: 0;
+		}
+	}
+	&__img {
+		padding-right: 10px;
+		@media (min-width: 800px) {
+			padding-right: 5px;
+		}
+	}
+	&__teaser {
+		flex-grow: 2;
+	    font-size: 1em;
+	}
+	&__time {
+		display: block;
+		margin: 0;
+    	font-size: 0.875em;
+		font-weight: bold;
+	}
+	&__link {
+		color: #7c7fc2;
+		width: 20px;
+		height: 20px;
+		padding-left: 20px;
+		svg {
+			width: 100%;
+			height: 35px;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.notifications {
+	width: 100%;
+    margin-right: 24px;
+    margin-left: 24px;
+}
+.notification {
+    position: relative;
+    display: flex;
+	width: 100%;
+	background: $color-primary;
+    border-radius: 4px;
+    margin-bottom: 20px;
+	&__text {
+		display: inline-block;
+		color: #fff;
+    	padding: 0.625rem 1.875rem 0.625rem 0.625rem;
+    	font-size: 0.75rem;
+	}
+	&__status {
+		padding-right: 7px;
+		font-size: 0.875rem;
+		font-weight: bold;
+	}
+	&__close {
+		position: absolute;
+	    top: 9px;
+	    right: 10px;
+	    color: #fff;
+	    font-size: 0.75em;
+		font-weight: bold;
+	}
+}

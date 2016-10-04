@@ -1,3 +1,57 @@
 .main {
 	display: flex;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	h2 {
+		width: 113px;
+		padding: 0 24px;
+    	font-size: 1em;
+	}
+	&__search {
+		position: relative;
+		width: calc(100% - 113px);
+		height: 100%;
+		align-self: center;
+		padding: 0 24px;
+		border-bottom: 1px solid $color-section-border;
+		border-left: 1px solid $color-section-border;
+		background: #fbfbfb;
+		text-align: right;
+		input {
+			  position: absolute;
+			  top: 50%;
+			  right: 15px;
+			  width: calc(100% - (15px * 2));
+			  padding: 10px;
+    		  border: 1px solid #d1d1d1;
+    		  background: #fbfbfb;
+    		  border-radius: 4px;
+	  		  transform: translateY(-50%);
+	  		  @media (min-width: 800px) {
+			  	right: 24px;
+				width: 300px;
+	  		  }
+		}
+		button {
+			position: absolute;
+			top: 50%;
+			right: 25px;
+			transform: translateY(-50%);
+			font-size: 0;
+			@media (min-width: 800px) {
+				right: 34px;
+			}
+			&:after {
+				width: 20px;
+				font-size: 16px;
+			}
+			img {
+				width: 15px;
+			}
+		}
+	}
 }

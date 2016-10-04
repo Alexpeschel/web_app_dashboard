@@ -1,0 +1,54 @@
+.settings {
+	box-sizing: border-box;
+	width: 100%;
+	padding-right: 15px;
+    padding-left: 15px;
+	border-top: 1px solid $color-section-border;
+	@media (min-width: 800px) {
+		width: 50%;
+		padding-right: 24px;
+	    padding-left: 36px;
+	}
+	&__item {
+		display: flex;
+		margin-bottom: 34px;
+	}
+	&__label {
+		align-self: center;
+    	width: 12em;
+		font-size: 1em;
+		margin-right: 20px;
+	}
+	&__switch { 
+		display: inline-block !important;
+		width: 5em;
+		input:checked ~ span {
+			box-shadow: inset 0 0 0 5em $color-secondary !important;
+			a {
+				border-color: $color-secondary !important;
+			} 
+		}
+	}
+	&__timezone {
+		width: 100%;
+		padding: 10px;
+	    border: 1px solid #d1d1d1;
+		margin-top: 20px;
+	    background: #fbfbfb;
+		border-radius: 4px;
+	}
+	&__buttons {
+		font-size: 0;
+	}
+	&__button {
+		box-sizing: border-box;
+		display: inline-block;
+		width: 47.5%;
+		margin-top: 20px;
+		margin-right: 5%;
+		font-size: 16px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
