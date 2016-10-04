@@ -313,7 +313,8 @@ button::-moz-focus-inner {
     color: #fff;
     font-size: 0.75em;
     font-weight: bold;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    cursor: pointer; }
 
 .traffic {
   box-sizing: border-box;
