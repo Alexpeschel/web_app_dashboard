@@ -4,7 +4,7 @@
 	padding-right: 15px;
     padding-left: 15px;
 	border-top: 1px solid $color-section-border;
-	@media (min-width: 800px) {
+	@media screen and (min-width: 800px) {
 		width: 50%;
 		padding-right: 24px;
 	    padding-left: 36px;
@@ -19,14 +19,14 @@
 		font-size: 1em;
 		margin-right: 20px;
 	}
-	&__switch { 
+	&__switch {
 		display: inline-block !important;
 		width: 5em;
 		input:checked ~ span {
 			box-shadow: inset 0 0 0 5em $color-secondary !important;
 			a {
 				border-color: $color-secondary !important;
-			} 
+			}
 		}
 	}
 	&__timezone {

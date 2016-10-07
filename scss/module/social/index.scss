@@ -7,7 +7,7 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		@media (min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			flex-direction: row;
 		}
 	}
@@ -19,11 +19,11 @@
 		border: 1px solid #d1d1d1;
 		background: #fbfbfb;
 		font-size: 0.431035em;
-		@media (max-width: 799px) {
+		@media screen and (max-width: 799px) {
 			margin-bottom: 18px;
 			justify-content: center;
 		}
-		@media (min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			width: 33%;
 			margin: 0 18px;
 		}
@@ -54,7 +54,7 @@
 		height: 2.875rem;
 		background: $color-primary;
 		border-radius: 50%;
-		@media (min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			width: 3.3788rem;
 			height: 3.3788rem;
 		}
@@ -67,7 +67,7 @@
 			width: 1rem;
 			margin: 0 auto;
 			transform: translate(-50%, -50%);
-			@media (min-width: 800px) {
+			@media screen and (min-width: 800px) {
 				width: 1.6rem;
 			}
 		}

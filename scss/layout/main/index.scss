@@ -31,7 +31,7 @@
     		  background: #fbfbfb;
     		  border-radius: 4px;
 	  		  transform: translateY(-50%);
-	  		  @media (min-width: 800px) {
+	  		  @media screen and (min-width: 800px) {
 			  	right: 24px;
 				width: 300px;
 	  		  }
@@ -42,7 +42,7 @@
 			right: 25px;
 			transform: translateY(-50%);
 			font-size: 0;
-			@media (min-width: 800px) {
+			@media screen and (min-width: 800px) {
 				right: 34px;
 			}
 			&:after {

@@ -11,7 +11,7 @@
 	padding: 0.875rem 0.9375rem;
 	background: $color-secondary;
 	z-index: 9999;
-	@media (min-width: 800px) {
+	@media screen and (min-width: 800px) {
 		height: 71px;
 	}
 	&__logo {
@@ -54,7 +54,7 @@
 		display: flex;
     	padding: 0 0 0 0.9375rem;
 		border-left: 1px solid #5d61bf;
-		@media (min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			padding: 0 15px;
 		}
 		span {
@@ -62,14 +62,14 @@
 			align-self: center;
 			color: #fff;
 			font-size: 0.75em;
-			@media (min-width: 800px) {
+			@media screen and (min-width: 800px) {
 				display: inline-block;
 			}
 		}
 	}
 	&__avatar {
 		align-self: center;
-		@media (min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			padding-right: 8px;
 		}
 	}
@@ -77,7 +77,7 @@
 		order: -1;
 		font-size: 1.3em;
 		color: #fff;
-		@media (min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			display: none;
 		}
 	}

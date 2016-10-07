@@ -5,7 +5,7 @@
 	padding: 0 24px;
 	margin-bottom: 30px;
 	&__header {
-		@media (min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			display: flex;
 				justify-content: space-between;
 		}
@@ -14,7 +14,7 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-bottom: 5px;
-	    @media (min-width: 800) {
+	    @media screen and (min-width: 800px) {
 	    	margin-bottom: 0;
 	    }
 		&__item {
@@ -39,7 +39,7 @@
 		}
 	}
 	canvas {
-			@media(min-width: 800px) {
+			@media screen and (min-width: 800px) {
 	    	max-width: 973px;
 	    	margin: 0 auto;
 			}

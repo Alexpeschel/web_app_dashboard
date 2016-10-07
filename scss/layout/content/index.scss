@@ -7,17 +7,17 @@
 	margin-top: 51px;
 	// margin-left: 59px;
 	padding-bottom: 37px;
-	@media (max-width: 799px) {
-		transition: 0.7s all; 
+	@media screen and (max-width: 799px) {
+		transition: 0.7s all;
 	}
-	@media (min-width: 800px) {
+	@media screen and (min-width: 800px) {
 			width: calc(100% - 89px);
 			margin-top: 71px;
 			margin-left: 89px;
 	}
 }
 
-@media (max-width: 799px) {
+@media screen and (max-width: 799px) {
 	.nav-open .content {
 		transform: translate3d(59px, 0, 0);
 	}

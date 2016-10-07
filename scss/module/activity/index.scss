@@ -21,7 +21,7 @@
 	}
 	&__img {
 		padding-right: 10px;
-		@media (min-width: 800px) {
+		@media screen and (min-width: 800px) {
 			padding-right: 5px;
 		}
 	}

@@ -1,6 +1,6 @@
 /* Older browsers */
-html { 
-    font-size: 16px; 
+html {
+    font-size: 16px;
     overflow-x: hidden;
 }
 
@@ -11,7 +11,7 @@ body {
     font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
     min-width: 320px;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 ul {
 	margin: 0;
@@ -77,17 +77,17 @@ button::-moz-focus-inner {
     margin: 1em 0;
     font-size: 1.5em;
 	font-weight: 300;
-    @media (min-width: 800px) {
+    @media screen and (min-width: 800px) {
         width: auto;
     }
 }
-  
+
   /* Modern browsers only need this one */
-  
+
   @media screen and (min-width: 25em){
-    html { font-size: calc( 16px + (24 - 16) * (100vw - 320px) / (2500 - 320) ); }
+    // html { font-size: calc( 16px + (24px - 16px) * (100vw - 320px) / (2500px - 320px) ); }
   }
-  
+
   /* Safari <8 and IE <11 */
   // @media screen and (min-width: 25em){
   //   html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }

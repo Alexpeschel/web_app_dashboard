@@ -113,12 +113,12 @@ document.getElementById('toggleNav').onclick = function() {
 
     var className = ' ' + bodyEl.className + ' ';
 
-    if ( ~className.indexOf(' nav-open ') ) {
+    if ( bodyEl.className.indexOf(' nav-open ') ) {
         bodyEl.className = className.replace(' nav-open ', '');
     } else {
         bodyEl.className += ' nav-open';
     }
-}
+};
 
 //Close notification
 
@@ -150,17 +150,17 @@ var messageUserForm = document.querySelector("#messageUserForm");
 messageUserForm.addEventListener("submit", function(e){
   e.preventDefault();    //stop form from submitting
   var isValid = false;
-  if(!messageUserForm.username.value == '' && !messageUserForm.usermsg.value == '') {
+  if(messageUserForm.username.value !== '' && messageUserForm.usermsg.value !== '') {
     isValid = true;
   }
   var status = [];
     if(!isValid){
 
         // if user searchfield || Message field is empty display notification error
-        if(messageUserForm.username.value == '') {
+        if(messageUserForm.username.value === '') {
           status.push('Username');
         }
-        if(messageUserForm.usermsg.value == '') {
+        if(messageUserForm.usermsg.value === '') {
           status.push('Usermessage');
         }
         console.log(status.length);
@@ -199,10 +199,11 @@ function createNotification(type, name) {
   newNotificationText.appendChild(newNotificationStatus);
 
   //create notification content
+  var newNotificationContent;
   if(type === 'error') {
-    var newNotificationContent = document.createTextNode('Please input the ' + name + '!');
+    newNotificationContent = document.createTextNode('Please input the ' + name + '!');
   } else if (type === 'success') {
-    var newNotificationContent = document.createTextNode(name + ' was successful!')
+    newNotificationContent = document.createTextNode(name + ' was successful!');
   }
   newNotificationText.appendChild(newNotificationContent);
 

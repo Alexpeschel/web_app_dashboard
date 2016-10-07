@@ -5,7 +5,7 @@
 	padding-left: 15px;
 	border-top: 1px solid $color-section-border;
 	border-right: 1px solid $color-section-border;
-	@media (min-width: 800px) {
+	@media screen and (min-width: 800px) {
 		width: 50%;
 	    padding-right: 36px;
 		padding-left: 24px;
