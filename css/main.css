@@ -294,7 +294,6 @@ button::-moz-focus-inner {
   position: relative;
   display: flex;
   width: 100%;
-  background: #7377bf;
   border-radius: 4px;
   margin-bottom: 20px; }
   .notification__text {
@@ -315,6 +314,12 @@ button::-moz-focus-inner {
     font-weight: bold;
     transform: translateY(-50%);
     cursor: pointer; }
+  .notification--alert {
+    background: #7377bf; }
+  .notification--error {
+    background: #7C3742; }
+  .notification--success {
+    background: #81c98f; }
 
 .traffic {
   box-sizing: border-box;
@@ -531,6 +536,19 @@ button::-moz-focus-inner {
     .activity__link svg {
       width: 100%;
       height: 35px; }
+  .activity__name {
+    padding: 0 3px;
+    font-weight: bold; }
+    .activity__name:before {
+      display: inline-block;
+      width: 13px;
+      padding-right: 3px; }
+    .activity__name--newpost:before {
+      content: url(../icons/newpost.svg); }
+    .activity__name--newmember:before {
+      content: url(../icons/newmember.svg); }
+    .activity__name--commented:before {
+      content: url(../icons/commented.svg); }
 
 .messageUser {
   box-sizing: border-box;

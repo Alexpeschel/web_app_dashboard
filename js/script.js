@@ -117,7 +117,7 @@ document.getElementById('toggleNav').onclick = function() {
         bodyEl.className = className.replace(' nav-open ', '');
     } else {
         bodyEl.className += ' nav-open';
-    }              
+    }
 }
 
 //Close notification
@@ -125,7 +125,7 @@ document.getElementById('toggleNav').onclick = function() {
 var matches;
 
 (function(doc) {
-   matches = 
+   matches =
       doc.matchesSelector ||
       doc.webkitMatchesSelector ||
       doc.mozMatchesSelector ||
@@ -134,9 +134,91 @@ var matches;
 })(document.documentElement);
 
 document.addEventListener('click', function(e) {
-   if ( matches.call( e.target, '.notification button') ) {
+   if ( matches.call( e.target, '.notification__close') ) {
       // proceed
       var x = e.target.parentElement;
       x.parentNode.removeChild(x);
-   } 
+   }
 }, false);
+
+
+//Form submit
+
+//form submitted
+var messageUserForm = document.querySelector("#messageUserForm");
+
+messageUserForm.addEventListener("submit", function(e){
+  e.preventDefault();    //stop form from submitting
+  var isValid = false;
+  if(!messageUserForm.username.value == '' && !messageUserForm.usermsg.value == '') {
+    isValid = true;
+  }
+  var status = [];
+    if(!isValid){
+
+        // if user searchfield || Message field is empty display notification error
+        if(messageUserForm.username.value == '') {
+          status.push('Username');
+        }
+        if(messageUserForm.usermsg.value == '') {
+          status.push('Usermessage');
+        }
+        console.log(status.length);
+        for( var k = 0; k < status.length; k++) {
+          // alert(status[k]);
+          createNotification('error', status[k]);
+
+        }
+    } else {
+      createNotification('success', 'Sending Email');
+      // messageUserForm.submit();
+    }
+});
+//display notification email was send
+
+
+
+//create notification element
+function createNotification(type, name) {
+
+  //create item
+  var newNotification = document.createElement('div');
+  newNotification.classList.add('notification');
+  newNotification.classList.add('notification--' + type);
+
+  //create text-item
+  var newNotificationText = document.createElement('p');
+  newNotificationText.classList.add('notification__text');
+
+  //create notification status
+  var newNotificationStatus = document.createElement('span');
+  newNotificationStatus.classList.add('notification__status');
+  var errorName = capitalize(type);
+  var newNotificationStatusContent = document.createTextNode(errorName);
+  newNotificationStatus.appendChild(newNotificationStatusContent);
+  newNotificationText.appendChild(newNotificationStatus);
+
+  //create notification content
+  if(type === 'error') {
+    var newNotificationContent = document.createTextNode('Please input the ' + name + '!');
+  } else if (type === 'success') {
+    var newNotificationContent = document.createTextNode(name + ' was successful!')
+  }
+  newNotificationText.appendChild(newNotificationContent);
+
+  newNotification.appendChild(newNotificationText);
+
+  var newNotificationClose = document.createElement('button');
+  newNotificationClose.classList.add('notification__close');
+  var newNotificationCloseIcon = document.createTextNode('X');
+  newNotificationClose.appendChild(newNotificationCloseIcon);
+  newNotification.appendChild(newNotificationClose);
+
+  var currentDiv = document.querySelector('#notifications');
+  currentDiv.appendChild(newNotification);
+}
+
+/// Capitalizer
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}

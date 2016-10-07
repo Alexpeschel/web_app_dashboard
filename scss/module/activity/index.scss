@@ -45,4 +45,28 @@
 			height: 35px;
 		}
 	}
+	&__name {
+		padding: 0 3px;
+		font-weight: bold;
+		&:before {
+			display: inline-block;
+			width: 13px;
+			padding-right: 3px;
+		}
+		&--newpost {
+			&:before {
+				content: url(../icons/newpost.svg);
+			}
+		}
+		&--newmember {
+			&:before {
+				content: url(../icons/newmember.svg);
+			}
+		}
+		&--commented {
+			&:before {
+				content: url(../icons/commented.svg);
+			}
+		}
+	}
 }

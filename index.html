@@ -75,12 +75,12 @@
                     </div>
                 </header>
 
-                <div class="notifications">
-                    <div class="notification">
+                <div class="notifications" id="notifications">
+                    <div class="notification notification--alert">
                         <p class="notification__text">
                             <span class="notification__status">Alert</span> Lorem ipsum dolor sit amet, consetetur sadipscing.
                         </p>
-                        <button class="notification__close js_closeNote">x</button>
+                        <button class="notification__close">X</button>
                     </div>
                 </div>
 
@@ -210,7 +210,25 @@
                         <li class="activity__item">
                             <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
                             <p class="activity__teaser">
-                                Victoria Chambers commented on YourApp's SEO Tips
+                                Victoria Chambers <span class="activity__name activity__name--newpost">made a post</span> on YourApp's SEO Tips
+                                <span class="activity__time">
+                                    <time datetime="2015-10-15T19:00">4 hours ago</time>
+                                </span>
+                            </p>
+                            <a href="#" class="activity__link icon-arrow">
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
+<g>
+    <g id="chevron-right">
+        <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153   " fill="#7a7ec2"/>
+    </g>
+</g>
+
+</svg></a>
+                        </li>
+                        <li class="activity__item">
+                            <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
+                            <p class="activity__teaser">
+                                Victoria Chambers has <span class="activity__name activity__name--newmember">signed up</span>
                                 <span class="activity__time">
                                     <time datetime="2015-10-15T19:00">4 hours ago</time>
                                 </span>
@@ -227,7 +245,7 @@
                         <li class="activity__item">
                             <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
                             <p class="activity__teaser">
-                                Victoria Chambers commented on YourApp's SEO Tips
+                                Victoria Chambers <span class="activity__name activity__name--commented">commented</span> on YourApp's SEO Tips
                                 <span class="activity__time">
                                     <time datetime="2015-10-15T19:00">4 hours ago</time>
                                 </span>
@@ -243,25 +261,8 @@
                         </li>
                         <li class="activity__item">
                             <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
-                            <p class="activity__teaser">
-                                Victoria Chambers commented on YourApp's SEO Tips
-                                <span class="activity__time">
-                                    <time datetime="2015-10-15T19:00">4 hours ago</time>
-                                </span>
-                            </p>
-                            <a href="#" class="activity__link icon-arrow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
-<g>
-    <g id="chevron-right">
-        <polygon points="94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153   " fill="#7a7ec2"/>
-    </g>
-</g>
-
-</svg></a>
-                        </li>
-                        <li class="activity__item">
-                            <img class="activity__img roundImage" src="img/avatar.png" alt="user image">
-                            <p class="activity__teaser">
-                                Victoria Chambers commented on YourApp's SEO Tips
+                            <p class="activity__teaser ">
+                                Victoria Chambers <span class="activity__name activity__name--commented">commented</span> on YourApp's SEO Tips
                                 <span class="activity__time">
                                     <time datetime="2015-10-15T19:00">4 hours ago</time>
                                 </span>
@@ -281,10 +282,10 @@
                 <section class="messageUser">
                     <h3 class="section__heading">Message User</h3>
 
-                    <form action="" class="messageUser__form">
-                        <input type="search" class="messageUser__input" placeholder="Search for User">
+                    <form action="" class="messageUser__form" id="messageUserForm">
+                        <input name="username" type="search" class="messageUser__input" placeholder="Search for User">
                         <textarea class="messageUser__textarea" name="usermsg" id="" cols="30" rows="10" placeholder="Message for User"></textarea>
-                        <button class="messageUser__button button-primary">Send</button>
+                        <button type="submit" class="messageUser__button button-primary">Send</button>
                     </form>
 
                 </section>

@@ -7,7 +7,6 @@
     position: relative;
     display: flex;
 	width: 100%;
-	background: $color-primary;
     border-radius: 4px;
     margin-bottom: 20px;
 	&__text {
@@ -30,5 +29,14 @@
 		font-weight: bold;
 		transform: translateY(-50%);
 		cursor: pointer;
+	}
+	&--alert {
+		background: $color-alert;
+	}
+	&--error {
+		background: $color-error;
+	}
+	&--success {
+		background: $color-success;
 	}
 }
