@@ -148,14 +148,13 @@ document.addEventListener('click', function(e) {
 var messageUserForm = document.querySelector("#messageUserForm");
 
 messageUserForm.addEventListener("submit", function(e){
-  e.preventDefault();    //stop form from submitting
   var isValid = false;
   if(messageUserForm.username.value !== '' && messageUserForm.usermsg.value !== '') {
     isValid = true;
   }
   var status = [];
     if(!isValid){
-
+        e.preventDefault();    //stop form from submitting
         // if user searchfield || Message field is empty display notification error
         if(messageUserForm.username.value === '') {
           status.push('Username');
@@ -165,13 +164,11 @@ messageUserForm.addEventListener("submit", function(e){
         }
         console.log(status.length);
         for( var k = 0; k < status.length; k++) {
-          // alert(status[k]);
           createNotification('error', status[k]);
 
         }
     } else {
       createNotification('success', 'Sending Email');
-      // messageUserForm.submit();
     }
 });
 //display notification email was send
